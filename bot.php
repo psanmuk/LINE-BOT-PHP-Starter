@@ -58,7 +58,7 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello
 $response = $bot->replyMessage($replyToken, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();			
-			
+			echo "======" . "\r\n";
 			
 		}
 	}
