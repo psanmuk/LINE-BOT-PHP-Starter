@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$text = $event['message']['text'].' http://www.spcom.co.th';
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -49,16 +49,16 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n======\r\n";
+			echo $result . "\r\n";
 			
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '00d355b7517eead664dd766943265264']);
+//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+//$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '00d355b7517eead664dd766943265264']);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
-$response = $bot->replyMessage($replyToken, $textMessageBuilder);
+//$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
+//$response = $bot->replyMessage($replyToken, $textMessageBuilder);
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();			
-			echo "======" . "\r\n";
+//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();			
+//			echo "======" . "\r\n";
 			
 		}
 	}
