@@ -51,8 +51,8 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 			
-//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('<channel access token>');
-//$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '<channel secret>']);
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '00d355b7517eead664dd766943265264']);
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
 $response = $bot->replyMessage($replyToken, $textMessageBuilder);
