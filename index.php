@@ -1,6 +1,7 @@
-//<?php
-//echo "Hello LINE BOT";
+<?php
+echo "Hello LINE BOT";
 
+/*
 <?php
 require_once '../vendor/autoload.php';
 use Monolog\Logger;
@@ -90,3 +91,4 @@ foreach ($events as $event) {
 		$response = $bot->replyMessage($event->getReplyToken(), $outputText);
 	}
 }  
+*/
